@@ -500,8 +500,34 @@ footer #copy {
         max-width: 250px;
     }
 }
+@media (min-width: 992px) {
+  #newsletter {
+    padding: 40px 80px; 
+  }
 
-@media (max-width: 768px) {
+  .newsletter-content {
+    flex-direction: row; 
+    justify-content: space-between;
+  }
+
+  .newsletter-text {
+    flex: 1;
+  }
+
+  .newsletter-form {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .newsletter-input {
+    width: 60%; 
+  }
+
+  .newsletter-btn {
+    width: auto; 
+  }
+}@media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         align-items: center;
