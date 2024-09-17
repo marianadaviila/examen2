@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;600;700&display=swap');
+:root {
+        --primary-color: var(--color-naranja);
+    --secondary-color: var(--color-negro);
+    --white-color: #FFFFFF;
+    --btn-color: var(--color-naranja);
+    --bg-color: var(--color-negro);
+    --text-color: var(--color-contenido);
+    --highlight-color: var(--color-naranja);
+    --color-titulo: var(--color-titulos);
+    --color-negro: #292930;
+    --color-naranja: #f7b614;
+    --color-titulos: #2a2a32;
+    --color-contenido: #AAA;
+}
+/* Estilos generales */
+body {
+    font-family: 'Catamaran', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+/* Header */
+header {
+    position: relative;
+    background-color: var(--bg-color);
+    width: 100%;
+    top: 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    background-color: var(--color-negro);
+    padding: 100px 0;
+    color: var(--color-contenido);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.hero-text h1 span {
+    color: #fff; 
+    font-weight: 700; 
+    display: block; 
+}
+
+.hero-text h1 {
+    color: var(--color-naranja); 
+    font-weight: 700; 
+}
+
+.hero-text p {
+    color: #AAA; 
+    font-size: 1.1rem;
+    margin: 20px 0;
+}
+
+.hero-text .btn {
+    background-color: var(--color-naranja);
+    color: var(--color-negro);
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.hero-text .btn:hover {
+    background-color: #e0a700;
+}
+
+.hero-images {
+    position: relative;
+    max-width: 750px; 
+    text-align: right;
+}
+
+.hero-images img.courier {
+    max-width: 95%; 
+    z-index: 2;
+    position: relative;
+}
+
+.hero-images img.slider-glob {
+    position: absolute;
+    top: -30px;
+    right: -20px;
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+#popular-goods {
+    background-color: var(--white-color);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#popular-goods h2 {
+    font-size: 2.5rem;
+    color: var(--color-titulos);
+    margin-bottom: 30px;
+    font-weight: 700; /* En negrita */
+}
+
+.owl-carousel {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.owl-carousel .goods-item {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    margin: 10px; /* Reducir gap */
+    padding: 20px;
+    width: 100%; /* Ajuste para hacer que se vea solo 1-3 items según el tamaño */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.owl-carousel .goods-item:hover {
+    transform: translateY(-10px); /* Efecto hover */
+}
+
+.owl-carousel .goods-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.owl-carousel .goods-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: var(--color-titulos);
+    font-weight: 700; /* En negrita */
+}
+
+.owl-carousel .goods-item p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin: 10px 0;
+}
+
+.owl-carousel .goods-item .price {
+    font-size: 1.5rem;
+    color: var(--highlight-color);
+    margin: 10px 0;
+}
+
+.owl-carousel .goods-item .rating {
+    color: var(--highlight-color);
+    margin-bottom: 10px;
+}
+
+.owl-carousel .goods-item .btn {
+    background-color: var(--btn-color);
+    color: var(--white-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: auto; /* Asegura que el botón esté en el mismo lugar */
+}
+
+.owl-carousel .goods-item .btn:hover {
+    background-color: #e0a700;
+}
+
+/* Owl Carousel Custom Navigation */
+.owl-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.owl-nav .owl-prev, .owl-nav .owl-next {
+    background-color: var(--btn-color);
+    color: var(--white-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.owl-nav .owl-prev:hover, .owl-nav .owl-next:hover {
+    background-color: #e0a700;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dots .owl-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-naranja);
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.owl-dots .owl-dot.active {
+    background-color: var(--color-negro);
+}
+
+/* Sit at Home Section */
+#sit-at-home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-negro);
+    padding: 60px 0; /* Elimina padding lateral, solo padding arriba y abajo */
+    position: relative;
+}
+
+.sit-at-home-content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 40px; /* Añade padding horizontal en el contenido */
+}
+
+.sit-at-home-content .text-content {
+    color: var(--white-color);
+    width: 45%; /* Mantén el ancho del contenido textual */
+    padding: 40px; /* Aumenta el padding alrededor para más espacio en los lados */
+    box-sizing: border-box;
+}
+
+.sit-at-home-content .text-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white-color);
+    margin-bottom: 20px;
+}
+
+.sit-at-home-content .text-content h2 span {
+    color: var(--color-naranja);
+}
+
+.sit-at-home-content .text-content p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 40px;
+}
+
+.sit-at-home-content .text-content .btn {
+    background-color: var(--color-naranja);
+    color: var(--color-negro);
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.sit-at-home-content .text-content .btn:hover {
+    background-color: #e0a700;
+}
+
+/* Iconos */
+.sit-at-home-content .text-content .features {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.sit-at-home-content .text-content .features .feature-item {
+    text-align: center;
+    color: var(--white-color);
+    margin: 0 10px;
+}
+
+.sit-at-home-content .text-content .features .feature-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.sit-at-home-content .text-content .features .feature-item h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+/* Imagen de la izquierda que ocupa la mitad de la sección */
+.sit-at-home-content img.home-image {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    background-image: url(../img/footer-bg.png);
+    background-size: cover;
+    padding-top: 40px;
+    color: rgba(255, 255, 255, 0.55);
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+footer p span {
+    color: var(--primary-color);
+}
+
+footer #copy {
+    padding: 20px 0;
+    margin-top: 5%;
+    color: var(--white-color);
+    border-top: 1px dashed rgba(255, 255, 255, 0.15);
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-images {
+        margin-top: 30px;
+    }
+
+    .hero-images img.courier {
+        max-width: 75%; 
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .hero-text .btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    .hero-images img.courier {
+        max-width: 85%;
+    }
+
+    .hero-images img.slider-glob {
+        top: -20px;
+        right: -10px;
+        opacity: 0.2; 
+    }
+
+    .hero-text {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 0.8rem;
+    }
+
+    .hero-text .btn {
+        padding: 6px 15px;
+        font-size: 0.8rem;
+    }
+
+    .hero-images img.courier {
+        max-width: 100%; 
+    }
+
+    .hero-images img.slider-glob {
+        top: -15px;
+        right: -5px;
+        width: 90%; 
+        opacity: 0.1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    #popular-goods h2 {
+        font-size: 2rem;
+    }
+
+    .owl-carousel .goods-item {
+        max-width: 220px; /* Ajustando para pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    #popular-goods h2 {
+        font-size: 1.8rem;
+    }
+
+    .owl-carousel .goods-item {
+        max-width: 200px; /* Ajustando para pantallas pequeñas */
+    }
+
+    .owl-nav .owl-prev, .owl-nav .owl-next {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #popular-goods h2 {
+        font-size: 1.5rem;
+    }
+
+    .owl-carousel .goods-item {
+        max-width: 180px; /* Ajustando para pantallas extra pequeñas */
+    }
+
+    .owl-nav .owl-prev, .owl-nav .owl-next {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+}
