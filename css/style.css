@@ -13,6 +13,7 @@
     --color-titulos: #2a2a32;
     --color-contenido: #AAA;
 }
+
 /* Estilos generales */
 body {
     font-family: 'Catamaran', sans-serif;
@@ -144,7 +145,7 @@ nav ul li a:hover {
     font-size: 2.5rem;
     color: var(--color-titulos);
     margin-bottom: 30px;
-    font-weight: 700; /* En negrita */
+    font-weight: 700; 
 }
 
 .owl-carousel {
@@ -156,16 +157,16 @@ nav ul li a:hover {
 .owl-carousel .goods-item {
     background-color: var(--white-color);
     border-radius: 10px;
-    margin: 10px; /* Reducir gap */
+    margin: 10px; 
     padding: 20px;
-    width: 100%; /* Ajuste para hacer que se vea solo 1-3 items según el tamaño */
+    width: 100%;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
 }
 
 .owl-carousel .goods-item:hover {
-    transform: translateY(-10px); /* Efecto hover */
+    transform: translateY(-10px); 
 }
 
 .owl-carousel .goods-item img {
@@ -178,7 +179,7 @@ nav ul li a:hover {
     font-size: 1.2rem;
     margin: 10px 0;
     color: var(--color-titulos);
-    font-weight: 700; /* En negrita */
+    font-weight: 700; 
 }
 
 .owl-carousel .goods-item p {
@@ -207,14 +208,14 @@ nav ul li a:hover {
     font-size: 1rem;
     cursor: pointer;
     width: 100%;
-    margin-top: auto; /* Asegura que el botón esté en el mismo lugar */
+    margin-top: auto; 
 }
 
 .owl-carousel .goods-item .btn:hover {
     background-color: #e0a700;
 }
 
-/* Owl Carousel Custom Navigation */
+
 .owl-nav {
     display: flex;
     justify-content: center;
@@ -261,7 +262,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: space-between;
     background-color: var(--color-negro);
-    padding: 60px 0; /* Elimina padding lateral, solo padding arriba y abajo */
+    padding: 60px 0; 
     position: relative;
 }
 
@@ -271,13 +272,13 @@ nav ul li a:hover {
     margin: 0 auto;
     justify-content: space-between;
     width: 100%;
-    padding: 0 40px; /* Añade padding horizontal en el contenido */
+    padding: 0 40px; 
 }
 
 .sit-at-home-content .text-content {
     color: var(--white-color);
-    width: 45%; /* Mantén el ancho del contenido textual */
-    padding: 40px; /* Aumenta el padding alrededor para más espacio en los lados */
+    width: 45%; 
+    padding: 40px; 
     box-sizing: border-box;
 }
 
@@ -338,12 +339,83 @@ nav ul li a:hover {
     margin-top: 5px;
 }
 
-/* Imagen de la izquierda que ocupa la mitad de la sección */
 .sit-at-home-content img.home-image {
     width: 50%;
     height: 100%;
     object-fit: cover;
 }
+
+/* Newsletter Section */
+#newsletter {
+    background-color: var(--color-naranja);
+    padding: 40px 20px;
+}
+
+.newsletter-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.newsletter-text {
+    display: flex;
+    align-items: center;
+}
+
+.newsletter-icon {
+    font-size: 2.5rem; 
+    margin-right: 20px;
+    color: var(--color-negro); 
+}
+
+.newsletter-details {
+    color: var(--white-color); 
+}
+
+.newsletter-details small {
+    font-size: 0.9rem;
+    font-weight: 700; 
+    color: var(--white-color);
+}
+
+.newsletter-details h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-negro); 
+    margin-top: 5px;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+}
+
+.newsletter-input {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 30px 0 0 30px; 
+    font-size: 1rem;
+    width: 300px;
+    outline: none;
+}
+
+.newsletter-btn {
+    padding: 15px 25px;
+    background-color: var(--color-negro); 
+    color: var(--white-color);
+    border: none;
+    border-radius: 0 30px 30px 0; 
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.newsletter-btn:hover {
+    background-color: #292930; 
+}
+
 
 /* Footer */
 footer {
@@ -368,11 +440,28 @@ footer #copy {
     border-top: 1px dashed rgba(255, 255, 255, 0.15);
 }
 
+/* Redes Sociales en el footer */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: var(--primary-color);
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #e0a700; 
+}
+
 /* Media Queries para diseño responsivo */
 @media (max-width: 992px) {
     .hero-content {
         flex-direction: column;
         text-align: center;
+        padding: 40px 0;
     }
 
     .hero-text h1 {
@@ -383,18 +472,39 @@ footer #copy {
         font-size: 1rem;
     }
 
-    .hero-images {
-        margin-top: 30px;
+    .hero-images img.courier {
+        max-width: 75%;
     }
 
-    .hero-images img.courier {
-        max-width: 75%; 
+    .hero-images img.slider-glob {
+        top: -20px;
+        right: -10px;
+        opacity: 0.2;
+    }
+
+    #sit-at-home .sit-at-home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sit-at-home-content .text-content {
+        padding: 30px 20px;
+        width: 100%; 
+    }
+
+    .sit-at-home-content img.home-image {
+        width: 100%; 
+    }
+
+    .owl-carousel .goods-item {
+        max-width: 250px;
     }
 }
 
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
+        align-items: center;
     }
 
     nav ul li {
@@ -409,29 +519,53 @@ footer #copy {
         font-size: 0.9rem;
     }
 
-    .hero-text .btn {
-        padding: 8px 20px;
-        font-size: 0.9rem;
-    }
-
     .hero-images img.courier {
         max-width: 85%;
     }
 
     .hero-images img.slider-glob {
-        top: -20px;
-        right: -10px;
-        opacity: 0.2; 
+        top: -15px;
+        right: -5px;
+        opacity: 0.1;
     }
 
-    .hero-text {
-        margin-top: 20px;
+    .owl-carousel .goods-item {
+        max-width: 220px; 
+    }
+
+    #sit-at-home {
+        padding: 30px 0;
+    }
+
+    .sit-at-home-content .text-content {
+        padding: 20px 15px;
+        width: 100%; 
+    }
+
+    .sit-at-home-content img.home-image {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+
+   
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-input {
+        width: 100%; 
+        margin-bottom: 10px; 
+    }
+
+    .newsletter-btn {
+        width: 100%; 
+        border-radius: 30px; 
     }
 }
 
 @media (max-width: 480px) {
     .hero-text h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .hero-text p {
@@ -439,59 +573,45 @@ footer #copy {
     }
 
     .hero-text .btn {
-        padding: 6px 15px;
+        padding: 8px 20px;
         font-size: 0.8rem;
     }
 
     .hero-images img.courier {
-        max-width: 100%; 
+        max-width: 100%;
     }
 
     .hero-images img.slider-glob {
-        top: -15px;
+        top: -10px;
         right: -5px;
-        width: 90%; 
         opacity: 0.1;
     }
-}
-
-/* Media Queries */
-@media (max-width: 992px) {
-    #popular-goods h2 {
-        font-size: 2rem;
-    }
 
     .owl-carousel .goods-item {
-        max-width: 220px; /* Ajustando para pantallas medianas */
-    }
-}
-
-@media (max-width: 768px) {
-    #popular-goods h2 {
-        font-size: 1.8rem;
+        max-width: 180px; 
     }
 
-    .owl-carousel .goods-item {
-        max-width: 200px; /* Ajustando para pantallas pequeñas */
+    .sit-at-home-content .text-content {
+        padding: 15px 10px;
     }
 
-    .owl-nav .owl-prev, .owl-nav .owl-next {
-        font-size: 1rem;
-        padding: 8px 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    #popular-goods h2 {
-        font-size: 1.5rem;
+    .newsletter-details h2 {
+        font-size: 1.2rem;
     }
 
-    .owl-carousel .goods-item {
-        max-width: 180px; /* Ajustando para pantallas extra pequeñas */
-    }
-
-    .owl-nav .owl-prev, .owl-nav .owl-next {
+    .newsletter-input {
+        width: 100%;
+        padding: 10px 15px;
         font-size: 0.9rem;
-        padding: 6px 10px;
+    }
+
+    .newsletter-btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .social-icons a {
+        margin: 0 5px;
+        font-size: 20px;
     }
 }

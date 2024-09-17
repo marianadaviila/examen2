@@ -18,19 +18,13 @@
 <body>
 	<header>
 		<div class="container-fluid">
-			
-			
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			  
 				<a class="navbar-brand" href="index.html">
 					<img src="img/logo_1x.png" class="img-fluid" >
 				</a>
-				
-				
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 				<i class="fas fa-bars"></i>
 			  </button>
-
 			  <div class="collapse navbar-collapse" id="navbar">
 				<ul class="navbar-nav mx-auto">
 				  <li class="nav-item active">
@@ -49,15 +43,10 @@
 					<a class="nav-link" href="#">Contacts</a>
 				  </li>
 				</ul>
-				  
 			  </div>
 			</nav>
-			
 		</div>
 	</header>
-
-</body>
-</html>
 
 <!-- Hero Section -->
 <section id="hero">
@@ -74,7 +63,7 @@
     </div>
 </section>
 
-    <!-- Popular Goods Section -->
+<!-- Popular Goods Section -->
 <section id="popular-goods">
     <h2>Popular Goods</h2>
     <div class="goods-carousel owl-carousel">
@@ -133,7 +122,7 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i> <!-- Estrella media -->
+                <i class="fas fa-star-half-alt"></i>
             </div>
             <p>Set ad perspicias unde omnis iste natus error sit voluptatem.</p>
             <div class="price">$11.99</div>
@@ -142,7 +131,7 @@
     </div>
 </section>
 
-    <!-- Sit at Home Section -->
+<!-- Sit at Home Section -->
 <section id="sit-at-home">
     <div class="sit-at-home-content">
         <img src="img/sit-photo.jpg" alt="Sit at Home" class="home-image">
@@ -171,54 +160,75 @@
         </div>
     </div>
 </section>
-	
-	<footer>
-		<section id="info">
-			<div class="container">
-				<img src="img/logo_1x.png" class="img-fluid m-auto d-block">
-				<br>
-				<p>Etiam consequat sem ullamcorper, euismod metus sit amet, tristique justo. Vestibulum mattis, nisi ut<br> faucibus commodo, risus ex commodo.</p>
-			</div>
-		</section>
-		<section id="copy">
-			<div class="container">
-				<p><span>Diseño Web</span> Mariana Dávila © All Rights Reserved - 2024</p>
-			</div>
-		</section>
-		
-	</footer>
 
+<!-- Newsletter Section -->
+<section id="newsletter">
+    <div class="container">
+        <div class="newsletter-content">
+            <div class="newsletter-text">
+                <i class="fa-solid fa-envelope-open-text newsletter-icon"></i> 
+                <div class="newsletter-details">
+                    <small>Get the latest news and offers</small>
+                    <h2>Subscribe to our newsletter</h2>
+                </div>
+            </div>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Your email ..." class="newsletter-input">
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <section id="info">
+        <div class="container">
+            <img src="img/logo_1x.png" class="img-fluid m-auto d-block">
+            <br>
+            <p>Etiam consequat sem ullamcorper, euismod metus sit amet, tristique justo. Vestibulum mattis, nisi ut<br> faucibus commodo, risus ex commodo.</p>
+            <!-- Redes Sociales -->
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+    <section id="copy">
+        <div class="container">
+            <p><span>Diseño Web</span> Mariana Dávila © All Rights Reserved - 2024</p>
+        </div>
+    </section>
+</footer>
 
 <!-- js -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-     <script>
-		$(document).ready(function(){
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: false,
-        dots: true,
-        center: true,
-        responsive: {
-            0: {
-                items: 1, // 1 hamburguesa en pantallas pequeñas
-                center: true
-            },
-            768: {
-                items: 2, // 2 hamburguesas en pantallas medianas
-                center: true
-            },
-            1200: {
-                items: 3 // 3 hamburguesas en pantallas grandes
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: true,
+            center: true,
+            responsive: {
+                0: {
+                    items: 1, 
+                    center: true
+                },
+                768: {
+                    items: 2, 
+                    center: true
+                },
+                1200: {
+                    items: 3 
+                }
             }
-        }
+        });
     });
-});
 </script>
-</script>	
-</script>	 
-
 </body>
-
 </html>
